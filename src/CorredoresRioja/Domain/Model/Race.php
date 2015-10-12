@@ -1,16 +1,7 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace CorredoresRioja\Domain\Model;
 
-/**
- * Description of Carrera
- *
- * @author Carlost
- */
 class Race {
     //put your code here
     private $id;
@@ -60,6 +51,7 @@ class Race {
 
     function setName($name) {
         $this->name = $name;
+        $this->slug = Util::getSlug($name);
     }
 
     function setDescription($description) {

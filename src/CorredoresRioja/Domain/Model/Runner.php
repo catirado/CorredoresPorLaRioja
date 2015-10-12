@@ -1,16 +1,7 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace CorredoresRioja\Domain\Model;
 
-/**
- * Description of Runner
- *
- * @author Carlost
- */
 class Runner {
     private $dni;
     private $name;
@@ -18,6 +9,7 @@ class Runner {
     private $email;
     private $password;
     private $salt;
+    //mejor esto otra clase
     private $address;
     private $birthDate;
 

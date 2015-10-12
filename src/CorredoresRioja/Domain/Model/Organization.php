@@ -1,16 +1,7 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace CorredoresRioja\Domain\Model;
 
-/**
- * Description of Organizacion
- *
- * @author Carlost
- */
 class Organization {
     
     private $id;
@@ -50,6 +41,7 @@ class Organization {
 
     function setName($name) {
         $this->name = $name;
+        $this->slug = Util::getSlug($name);
     }
 
     function setDescription($description) {
@@ -66,16 +58,5 @@ class Organization {
 
     function setSalt($salt) {
         $this->salt = $salt;
-    }
-
-        
-    static public function getSlug($cadena, $separador = '-') ​ 
-    { 
-        // Código copiado de http://cubiq.org/the-perfect-php-clean-url-generator 
-        $slug = iconv( ​ 'UTF-8' ​ , ​   ​ 'ASCII//TRANSLIT' ​ , ​  $cadena ​ ); 
-        $slug = preg_replace ​ ( ​ "/[^a-zA-Z0-9\/_|+ -]/" ​ , ​   ​ '' ​ , ​  $slug ​ ); 
-        $slug​ = strtolower ​ ( ​ trim ​ ( ​ $slug ​ , ​  $separador ​ )); 
-        $slug​ = preg_replace ​ ( ​ "/[\/_|+ -]+/" ​ , ​  $separador ​ , ​  $slug ​ ); 
-        return $slug; 
     }
 }
