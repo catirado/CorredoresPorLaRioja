@@ -3,6 +3,7 @@
 namespace CorredoresRioja\Infrastructure\Repositories;
 
 class InMemoryRunnerRepository implements RunnerRepository {
+    
     public function createNewRunner($runner) {
         
     }
