@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+{% stylesheets '@RunnersBundle/Resources/public/css/bootstrap.min.css'
+   output='css/runners.css' %}
+    <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block body %} {% endblock %}
