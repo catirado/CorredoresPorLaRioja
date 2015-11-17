@@ -11,6 +11,10 @@ class Organization {
     private $password;
     private $salt;
     
+    //constructor para crearla
+    
+    //funciones signficiativas, así como constructores
+    
     function getId() {
         return $this->id;
     }

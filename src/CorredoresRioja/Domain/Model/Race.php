@@ -3,7 +3,7 @@
 namespace CorredoresRioja\Domain\Model;
 
 class Race {
-    //put your code here
+    
     private $id;
     private $name;
     private $description;

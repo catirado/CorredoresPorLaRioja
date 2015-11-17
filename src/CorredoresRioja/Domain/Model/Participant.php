@@ -2,6 +2,7 @@
 
 namespace CorredoresRioja\Domain\Model;
 
+//es un value object???
 class Participant {
     
     private $dorsal;
@@ -22,6 +23,4 @@ class Participant {
     function setTime($time) {
         $this->time = $time;
     }
-
-
 }
