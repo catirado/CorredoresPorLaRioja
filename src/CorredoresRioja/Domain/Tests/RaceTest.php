@@ -9,9 +9,13 @@ class RaceTest extends \PHPUnit_Framework_TestCase{
         
     }
     
-    //for more cases
+    //for more cases, mas de x, fecha, 
     public function testIsInscriptionsOpen()
     {
         
     }
+    
+    //carrera ya disputada
+    
+    
 }
