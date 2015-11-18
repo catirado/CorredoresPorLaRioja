@@ -8,9 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class UsersController extends Controller
 {
-    /**
-     * @Route("/login", name="login")
-     */
     public function loginAction(Request $request)
     {
         return $this->render('default/races.html.twig', array(
