@@ -1,0 +1,9 @@
+# menu.es.yml
+
+menu.home: Inicio
+menu.races: Carreras
+menu.profile: Perfil
+menu.myraces: Mis carreras
+menu.organizations: Organizaciones
+menu.logout: Salir
+menu.login: Entrar

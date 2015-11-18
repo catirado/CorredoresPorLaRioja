@@ -1,0 +1,9 @@
+# menu.en.yml
+
+menu.home: Home
+menu.races: Races
+menu.profile: Profile
+menu.myraces: My races
+menu.organizations: Organizations
+menu.logout: Logout
+menu.login: Log in

@@ -4128,8 +4128,8 @@ div.bbp-forum-header, div.bbp-topic-header, div.bbp-reply-header, li.bbp-body di
    3.17 SECTION: FOOTER
 -----------------------------------------*/
 .footer {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 
 .footer-links li {
