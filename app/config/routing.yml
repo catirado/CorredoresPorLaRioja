@@ -2,6 +2,10 @@
 ##    resource: "@RunnersBundle/Controller/"
 ##    type:     annotation
 
+root:
+    pattern:  /
+    defaults: { _controller: RunnersBundle:Default:index, _locale:es}
+    
 RunnersBundle:
    resource: "@RunnersBundle/Resources/config/routing.yml"
    prefix: /{_locale}
