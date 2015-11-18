@@ -8,3 +8,7 @@ homepage:
 races:
     pattern:  /races
     defaults: { _controller: RunnersBundle:Races:index }
+ 
+login:
+    pattern:  /login
+    defaults: { _controller: RunnersBundle:Users:login }
