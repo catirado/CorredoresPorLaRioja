@@ -6609,3 +6609,16 @@ input[type=submit].edd-submit {
 	border: none;
 }
 
+/*---------------------------------------
+   10 CUSTOM CSS
+-----------------------------------------*/
+#parallax_header
+{
+    padding-bottom: 120px;
+    padding-top: 100px;
+}
+
+#intro-section
+{
+    margin-top: 70px;
+}
