@@ -2,7 +2,7 @@
 
 namespace CorredoresRioja\Infrastructure\Repositories;
 
-class InMemoryOrgnizationRepository implements OrganizationRepository {
+class InMemoryOrganizationRepository implements OrganizationRepository {
     
     //hago una coleccion de lista de organizaciones
     private $organizations;

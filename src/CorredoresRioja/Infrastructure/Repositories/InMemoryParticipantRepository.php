@@ -2,7 +2,7 @@
 
 namespace CorredoresRioja\Infrastructure\Repositories;
 
-class InMemoryParticipantRepsitory implements ParticipantRepsitory {
+class InMemoryParticipantRepository implements ParticipantRepsitory {
     
     public function getAllRacesForRunner($runnerId) {
         
