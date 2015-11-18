@@ -1,3 +1,6 @@
 home.searchraces: Search races
 home.slogan: Easy, Complete and Intuitive
 home.description: In corredoresrioja you can find all the races near of you in only one click
+
+asserts.ispasswordlegal: The name and the password cannot be the same
+asserts.isadult: You need to be adult to register

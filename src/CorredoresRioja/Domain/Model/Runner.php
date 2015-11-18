@@ -76,4 +76,23 @@ class Runner {
     function setBirthDate($birthDate) {
         $this->birthDate = $birthDate;
     }
+    
+    /**
+     * Assert\True(message="asserts.ispasswordlegal")
+     */
+    public function isPasswordLegal()
+    {
+        return $this->nombre != $this-password;
+    }
+    
+    /**
+     * Assert\True(message="asserts.isadult")
+     */
+    public function isAdult()
+    {
+        $currentYear = getdate()['year'];
+        $birthdayYear = ($this->birthDate->format('Y'));
+        $diff_years = ($currentYear - $birthdayYear);
+        return $diff_years >= 18;
+    }
 }
