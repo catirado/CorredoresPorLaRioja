@@ -7,3 +7,13 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+#    entryrepository:
+#        alias:entryrepository.doctrine
+#    entryrepository.inmemory:
+#        class:Blog\BlogInfrastructure\Repository\Infrastructure\InMemoryEntryRepository
+#        public:false
+#    entryrepository.doctrine:
+#        class:Blog\BlogInfrastructure\Repository\Infrastructure\DoctrineEntryRepository
+#        public:false
+#        arguments:["@doctrine.orm.entity_manager"]
+    
