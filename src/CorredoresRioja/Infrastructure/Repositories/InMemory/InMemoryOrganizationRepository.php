@@ -1,7 +1,7 @@
 <?php
 
 namespace CorredoresRioja\Infrastructure\Repositories\InMemory;
-use CorredoresRioja\Domain\Repositories\OrganizationRepository::;
+use CorredoresRioja\Domain\Repositories\OrganizationRepository;
 
 class InMemoryOrganizationRepository implements OrganizationRepository {
     
