@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             //we add here all the bundles
             //new AppBundle\AppBundle(),
             new CorredoresRioja\UI\RunnersBundle\RunnersBundle(),
+            new CorredoresRioja\UI\OrganizationsBundle\OrganizationsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
