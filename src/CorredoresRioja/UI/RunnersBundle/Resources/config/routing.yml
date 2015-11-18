@@ -1,0 +1,6 @@
+#faltan meter traducciones
+
+#Ruta de la portada
+runners_portada:
+    pattern:  /
+    defaults: { _controller: RunnersBundle:Default:index }

@@ -1,3 +1,19 @@
-app:
-    resource: "@RunnersBundle/Controller/"
-    type:     annotation
+##app:
+##    resource: "@RunnersBundle/Controller/"
+##    type:     annotation
+
+RunnersBundle:
+   resource: "@RunnersBundle/Resources/config/routing.yml"
+   prefix: /{_locale}
+   requirements:
+       _locale: en|es
+   defaults:
+       _locale: es
+    
+OrganizationsBundle:
+   resource: "@OrganizationsBundle/Resources/config/routing.yml"
+   prefix: /{_locale}
+   requirements:
+       _locale: en|es
+   defaults:
+       _locale: es
