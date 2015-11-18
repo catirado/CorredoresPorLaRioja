@@ -1,6 +1,10 @@
 #faltan meter traducciones
 
 #Ruta de la portada
-runners_portada:
+homepage:
     pattern:  /
     defaults: { _controller: RunnersBundle:Default:index }
+    
+races:
+    pattern:  /races
+    defaults: { _controller: RunnersBundle:Races:index }

@@ -1,10 +1,81 @@
+<header id="masthead" role="banner" data-stellar-background-ratio="0.5" class="header header-style-one site-header">
+    <!-- COLOR OVER IMAGE -->
+    <div class="overlay-layer-nav sticky-navigation-open" style="min-height: 70px;">
 
+        <!-- STICKY NAVIGATION -->
+        <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation appear-on-scroll">
+            <!-- CONTAINER -->
+            <div class="container">
 
-<header>
-<ul>
-    <li><a href="{{ path('homepage') }}">Inicio</a></li>
-    <li><a href="{{ path('races') }}">Carrreras</a></li>
-    <li><a href="{{ path('races') }}">Carrreras</a></li>
-    <li>Login</li>
-</ul>
+                <div class="navbar-header">
+
+                    <!-- LOGO -->
+                    <button title="Toggle Menu" type="button" class="navbar-toggle menu-toggle" id="menu-toggle" data-toggle="collapse" data-target="#menu-primary">
+                    <span class="screen-reader-text">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a href="{{ path('homepage') }}" class="navbar-brand" title="Parallax One"><img src="http://demo.themeisle.com/parallax-one/wp-content/themes/Parallax-One/images/logo-nav.png" alt="Parallax One" class=""></a><div class="header-logo-wrap text-header paralax_one_only_customizer"><h1 itemprop="headline" id="site-title" class="site-title"><a href="http://demo.themeisle.com/parallax-one/" title="Parallax One" rel="home">Parallax One</a></h1><p itemprop="description" id="site-description" class="site-description">Just another WordPress site by Themeisle</p></div>
+                </div>
+
+                <!-- MENU -->
+                <div aria-label="Primary Menu" id="menu-primary" class="navbar-collapse collapse">
+                    <!-- LOGO ON STICKY NAV BAR -->
+                    <div id="site-header-menu" class="site-header-menu">
+                            <nav id="site-navigation" class="main-navigation" role="navigation">
+                                <div class="menu-menu-1-container">
+                                    <ul id="menu-menu-1" class="primary-menu small-text">
+                                        <li id="menu-item-2309" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2309"><a href="http://demo.themeisle.com/parallax-one/">Home</a></li>
+                                        <li id="menu-item-2306" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2306"><a href="http://demo.themeisle.com/parallax-one/#services">Our Services</a></li>
+                                        <li id="menu-item-2302" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2302"><a href="http://demo.themeisle.com/parallax-one/#story">Why Us</a></li>
+                                        <li id="menu-item-2307" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2307"><a href="http://demo.themeisle.com/parallax-one/#team">Team</a></li>
+                                        <li id="menu-item-2308" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-2308"><a href="http://demo.themeisle.com/parallax-one/#customers">Testimonials</a></li>
+                                        <li id="menu-item-2315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"><a href="http://demo.themeisle.com/parallax-one/pricing/">Pricing</a></li>
+                                        <li id="menu-item-2305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href="http://demo.themeisle.com/parallax-one/contact/">Contact</a></li>
+                                        <li id="menu-item-2304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2304"><a href="http://demo.themeisle.com/parallax-one/blog/">Blog</a></li>
+                                        <li id="menu-item-2303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2303"><a href="http://demo.themeisle.com/parallax-one/shop/" class="">Shop</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- /END CONTAINER -->
+        </div>
+        <!-- /END STICKY NAVIGATION -->
+        <!-- CONTAINER -->
+        <ul id="parallax_move" style="width: 1469px; margin-left: -60px; margin-top: -60px; position: absolute; transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+            {% image '@RunnersBundle/Resources/public/images/background.jpg' output='/images/background.jpg' %}
+           <li class="layer layer1" data-depth="0.10" style="height: 873px; transform: translate3d(4.23709px, -8.41158px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px; background-image: url({{ asset_url }});">
+           </li>
+           {% endimage %}
+        </ul>
+            <div class="overlay-layer-wrap">
+                    <div class="container overlay-layer" id="parallax_header" style="padding-top: 154px;">
+
+                    <!-- ONLY LOGO ON HEADER -->
+                    <div class="only-logo"><div id="only-logo-inner" class="navbar"><div id="parallax_only_logo" class="navbar-header"><img src="http://demo.themeisle.com/parallax-one/wp-content/themes/Parallax-One/images/logo-2.png" alt=""></div></div></div>			<!-- /END ONLY LOGO ON HEADER -->
+
+                    <div class="row">
+                            <div class="col-md-12 intro-section-text-wrap">
+
+                                    <!-- HEADING AND BUTTONS -->
+                                    <div id="intro-section" class="intro-section">
+
+                                                    <!-- WELCOM MESSAGE -->
+                                                    <h1 id="intro_section_text_1" class="intro white-text">Simple, Reliable and Awesome.</h1>
+
+                                                    <h5 id="intro_section_text_2" class="white-text">Parallax One is a fully-responsive, minimalistic template, designed to be ideal for business websites.</h5>
+                                                    <!-- BUTTON -->
+                                                    <button id="inpage_scroll_btn" class="btn btn-primary standard-button inpage-scroll" data-anchor="#"><span class="screen-reader-text">Header button label:GET STARTED</span>GET STARTED</button>							<!-- /END BUTTON -->
+
+                                            </div>
+         </div>
+                    </div>
+                    </div>
+            </div>
+  </div>
+ <!-- /END COLOR OVER IMAGE -->
 </header>
