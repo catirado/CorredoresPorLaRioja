@@ -1,6 +1,7 @@
 <?php
 
-namespace CorredoresRioja\Infrastructure\Repositories;
+namespace CorredoresRioja\Infrastructure\Repositories\InMemory;
+use CorredoresRioja\Domain\Repositories\ParticipantRepsitory;
 
 class InMemoryParticipantRepository implements ParticipantRepsitory {
     

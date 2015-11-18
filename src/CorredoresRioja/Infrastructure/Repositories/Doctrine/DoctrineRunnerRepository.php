@@ -1,8 +1,9 @@
 <?php
 
-namespace CorredoresRioja\Infrastructure\Repositories;
+namespace CorredoresRioja\Infrastructure\Repositories\Doctrine;
+use CorredoresRioja\Domain\Repositories\RunnerRepository;
 
-class InMemoryRunnerRepository implements RunnerRepository {
+class DoctrineRunnerRepository implements RunnerRepository {
     
     public function createNewRunner($runner) {
         

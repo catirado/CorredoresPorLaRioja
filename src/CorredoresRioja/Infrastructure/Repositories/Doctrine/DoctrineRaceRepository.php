@@ -1,9 +1,9 @@
 <?php
 
-namespace CorredoresRioja\Infrastructure\Repositories;
+namespace CorredoresRioja\Infrastructure\Repositories\Doctrine;
+use CorredoresRioja\Domain\Repositories\RaceRepository;
 
-class InMemoryRaceRepository implements RaceRepository{
-    
+class DoctrineRaceRepository implements RaceRepository{
     public function createNewRace($race) {
         
     }

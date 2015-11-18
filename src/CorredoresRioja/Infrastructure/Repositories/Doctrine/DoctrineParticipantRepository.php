@@ -1,8 +1,9 @@
 <?php
 
-namespace CorredoresRioja\Infrastructure\Repositories;
+namespace CorredoresRioja\Infrastructure\Repositories\Doctrine;
+use CorredoresRioja\Domain\Repositories\ParticipantRepsitory;
 
-class DoctrineParticipantRepository implements \CorredoresRioja\Domain\Repositories\ParticipantRepsitory{
+class DoctrineParticipantRepository implements ParticipantRepsitory{
     
     public function getAllRacesForRunner($runnerId) {
         

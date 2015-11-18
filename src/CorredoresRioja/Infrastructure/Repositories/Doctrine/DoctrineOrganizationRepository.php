@@ -1,18 +1,16 @@
 <?php
 
-namespace CorredoresRioja\Infrastructure\Repositories;
+namespace CorredoresRioja\Infrastructure\Repositories\Doctrine;
+use CorredoresRioja\Domain\Repositories\OrganizationRepository;
 
-class InMemoryOrganizationRepository implements OrganizationRepository {
-    
-    //hago una coleccion de lista de organizaciones
-    private $organizations;
+class DoctrineOrgnizationRepository implements OrganizationRepository{
     
     public function createNewOrganization($organization) {
-        $this->organizations.add($organization);
+        
     }
 
     public function getAllOrganizations() {
-        return $this->$organizations;
+        
     }
 
     public function getOrganizationByMail($mail) {
@@ -24,11 +22,12 @@ class InMemoryOrganizationRepository implements OrganizationRepository {
     }
 
     public function removeOrganization($organizationId) {
-        return null;
+        
     }
 
     public function updateOrgnizationInfo($organization) {
-        return $organization;
+        
     }
-    
+
+//put your code here
 }
