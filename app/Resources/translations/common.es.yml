@@ -1,7 +1,8 @@
 home.searchraces: Buscar carreras
 home.slogan: Fácil, Completo e Intuitivo
 home.description: En corredoresrioja encontrarás todas las carreras cerca de ti a un sólo click
-
+races.nextsraces: Próximas carreras
+races.oldraces: Carreras ya disputadas
 
 asserts.ispasswordlegal: La contraseña no puede ser la misma que el nombre
 asserts.isadult: Tienes que ser mayor de edad para registrarte
