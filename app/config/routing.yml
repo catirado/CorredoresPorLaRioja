@@ -1,7 +1,3 @@
-##app:
-##    resource: "@RunnersBundle/Controller/"
-##    type:     annotation
-
 root:
     pattern:  /
     defaults: { _controller: RunnersBundle:Default:index, _locale:es}
@@ -9,20 +5,14 @@ root:
 RunnersBundle:
    resource: "@RunnersBundle/Resources/config/routing.yml"
    prefix: /{_locale}
-   requirements:
-       _locale: en|es
-   defaults:
-       _locale: es
-    
+   type: be_simple_i18n
+
 OrganizationsBundle:
    resource: "@OrganizationsBundle/Resources/config/routing.yml"
    prefix: /{_locale}
-   requirements:
-       _locale: en|es
-   defaults:
-       _locale: es
-       
+   type: be_simple_i18n
+    
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/"
-    type:     annotation
-    prefix:   /admin
+    type: annotation
+    prefix: /admin

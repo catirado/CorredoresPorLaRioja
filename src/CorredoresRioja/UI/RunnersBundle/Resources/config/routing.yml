@@ -6,9 +6,13 @@ homepage:
     defaults: { _controller: RunnersBundle:Default:index }
     
 races:
-    pattern:  /races
+    locales:  { en: "/races", es: "/carreras" }
     defaults: { _controller: RunnersBundle:Races:index }
  
 login:
     pattern:  /login
     defaults: { _controller: RunnersBundle:Users:login }
+    
+race:
+    locales:  { en: "/race/{slug}", es: "/carrera/{slug}" }
+    defaults: { _controller: RunnersBundle:Races:showRace }

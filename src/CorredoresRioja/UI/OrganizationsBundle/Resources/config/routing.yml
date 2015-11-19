@@ -1,4 +1,4 @@
 #faltan meter traducciones
 organizations:
-    pattern:  /organizations
+    locales: { en: "/organizations", es: "/organizaciones" }
     defaults: { _controller: RunnersBundle:Races:index }
