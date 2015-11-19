@@ -2,9 +2,10 @@
 
 namespace CorredoresRioja\Infrastructure\Repositories\Doctrine;
 use CorredoresRioja\Domain\Repositories\RaceRepository;
+use CorredoresRioja\Domain\Model\Race;
 
 class DoctrineRaceRepository implements RaceRepository{
-    public function createNewRace($race) {
+    public function createNewRace(Race $race) {
         
     }
 
@@ -36,9 +37,8 @@ class DoctrineRaceRepository implements RaceRepository{
         
     }
 
-    public function updateRaceInfo($race) {
+    public function updateRaceInfo(Race $race) {
         
     }
 
-//put your code here
 }
