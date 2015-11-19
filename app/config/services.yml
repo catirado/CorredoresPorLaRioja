@@ -4,16 +4,27 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
-#    entryrepository:
-#        alias:entryrepository.doctrine
-#    entryrepository.inmemory:
-#        class:Blog\BlogInfrastructure\Repository\Infrastructure\InMemoryEntryRepository
-#        public:false
-#    entryrepository.doctrine:
-#        class:Blog\BlogInfrastructure\Repository\Infrastructure\DoctrineEntryRepository
-#        public:false
-#        arguments:["@doctrine.orm.entity_manager"]
-    
+    racerepository:
+        alias: racerepository.inmemory
+    racerepository.inmemory:
+        class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryRaceRepository
+        public: false
+    runnerrepositoray:
+        alias: runnerrepository.inmemory
+    runnerrepository.inmemory:
+        class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryRunnerRepository
+        public: false
+    organizationrepository:        
+        alias: organizationrepository.inmemory
+    organizationrepository.inmemory:
+        class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryOrganizationRepository
+        public: false
+    participantrepository:
+        alias: participantrepository.inmemory
+    participantrepository.inmemory:        
+        class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryParticipantRepository
+        public: false   
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
