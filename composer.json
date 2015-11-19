@@ -19,7 +19,9 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "besimple/i18n-routing-bundle": "dev-master",
-        "javiereguiluz/easyadmin-bundle": "v1.9.1"
+        "javiereguiluz/easyadmin-bundle": "v1.9.1",
+        "twig/extensions": "dev-master",
+        "gregwar/image-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

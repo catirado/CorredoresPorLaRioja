@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Gregwar\ImageBundle\GregwarImageBundle(),
             new CorredoresRioja\UI\RunnersBundle\RunnersBundle(),
             new CorredoresRioja\UI\OrganizationsBundle\OrganizationsBundle(),
         );

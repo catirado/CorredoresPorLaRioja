@@ -78,3 +78,7 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+ 
+be_simple_i18n_routing: ~
+
+gregwar_image: ~
