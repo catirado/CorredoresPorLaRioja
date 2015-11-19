@@ -1,6 +1,7 @@
 <?php
 
 namespace CorredoresRioja\Domain\Model;
+use CorredoresRioja\Infrastructure\Util;
 
 class Race {
     
@@ -12,79 +13,77 @@ class Race {
     private $inscriptionLimitDate;
     private $maxParticipants;
     private $image;
+    private $organizationId;
+    private $slug;
+    private $city;
     
-    function getId() {
+    public function __construct($id,
+                                $name,
+                                $description,
+                                $date,
+                                $distance,
+                                $inscriptionLimitDate,
+                                $maxParticipants,
+                                $image,
+                                $organizationId,
+                                $city) {
+        $this->id = $id;
+        $this->name = $name;
+        $this->description = $description;
+        $this->date = $date;
+        $this->distance = $distance;
+        $this->inscriptionLimitDate = $inscriptionLimitDate;
+        $this->maxParticipants = $maxParticipants;
+        $this->image = $image;
+        $this->organizationId = $organizationId;
+        $this->city = $city;
+        $this->slug = Util::getSlug($name);
+    }
+    
+    public function getId() {
         return $this->id;
     }
 
-    function getName() {
+    public function getName() {
         return $this->name;
     }
 
-    function getDescription() {
+    public function getDescription() {
         return $this->description;
     }
 
-    function getDate() {
+    public function getDate() {
         return $this->date;
     }
 
-    function getDistance() {
+    public function getDistance() {
         return $this->distance;
     }
 
-    function getInscriptionLimitDate() {
+    public function getInscriptionLimitDate() {
         return $this->inscriptionLimitDate;
     }
 
-    function getMaxParticipants() {
+    public function getMaxParticipants() {
         return $this->maxParticipants;
     }
 
-    function getImage() {
+    public function getImage() {
         return $this->image;
     }
-
-    function setId($id) {
-        $this->id = $id;
+    
+    public function getOrganizationId() {
+        return $this->organizationId;
     }
-
-    function setName($name) {
-        $this->name = $name;
-        $this->slug = Util::getSlug($name);
+    
+    public function getCity()
+    {
+        return $this->city;
     }
-
-    function setDescription($description) {
-        $this->description = $description;
+    
+    public function getSlug()
+    {
+        return $this->slug;
     }
-
-    function setDate($date) {
-        $this->date = $date;
-    }
-
-    function setDistance($distance) {
-        $this->distance = $distance;
-    }
-
-    function setInscriptionLimitDate($inscriptionLimitDate) {
-        $this->inscriptionLimitDate = $inscriptionLimitDate;
-    }
-
-    function setMaxParticipants($maxParticipants) {
-        $this->maxParticipants = $maxParticipants;
-    }
-
-    function setImage($image) {
-        $this->image = $image;
-    }
-
-        static public function getSlug($cadena, $separador = '-') ​ 
-    { 
-        // Código copiado de http://cubiq.org/the-perfect-php-clean-url-generator 
-        $slug = iconv( ​ 'UTF-8' ​ , ​   ​ 'ASCII//TRANSLIT' ​ , ​  $cadena ​ ); 
-        $slug = preg_replace ​ ( ​ "/[^a-zA-Z0-9\/_|+ -]/" ​ , ​   ​ '' ​ , ​  $slug ​ ); 
-        $slug​ = strtolower ​ ( ​ trim ​ ( ​ $slug ​ , ​  $separador ​ )); 
-        $slug​ = preg_replace ​ ( ​ "/[\/_|+ -]+/" ​ , ​  $separador ​ , ​  $slug ​ ); 
-        return $slug; 
-    }
+    
 }
