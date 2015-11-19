@@ -1,0 +1,36 @@
+<article class="border-bottom-hover post type-post status-publish format-standard has-post-thumbnail hentry category-parallax-one category-themeisle category-wordpress" title="Blog post: Blog Post Title">
+    <header class="entry-header">
+        <div class="post-img-wrap">
+                <a href="{{path('race', {'slug': race.slug})}}" title="{{race.name}}">
+                
+                <picture>
+                    <img src="{{web_image('images/races/' ~ race.image).zoomCrop(240,240)}}" alt="{{race.name}}">
+                </picture>
+                
+                </a>
+                <div class="post-date entry-published updated">
+                    <span class="post-date-day">{{race.date|date('d')}}</span>
+                    <span class="post-date-month">{{race.date|localizeddate('none', 'none', app.request.locale, null, 'LLLL')|slice(0,3)}}</span>
+                </div>
+        </div>
+
+        <div class="entry-meta list-post-entry-meta">
+            <h3><a href="{{path('race', {'slug': race.slug})}}">{{race.name}}</a></h3>
+            <span itemscope="" itemprop="author" itemtype="http://schema.org/Person" class="entry-author post-author">
+                    <span itemprop="name" class="entry-author author vcard">
+                    <i class="icon-man-people-streamline-user"></i><a itemprop="url" class="url fn n" href="http://demo.themeisle.com/parallax-one/author/codeinwp/" rel="author">codeinwp </a>
+                    </span>
+            </span>
+            
+                    <p>{{race.distance}}</p>
+                    <p>{{race.date|localizeddate('full','none',app.request.locale)}}</p>
+                    <p><span class="posted-in">{{race.city}}</span></p>
+            <span class="posted-in entry-terms-categories" itemprop="articleSection">
+                    <i class="icon-basic-elaboration-folder-check"></i>Posted in 
+                    <a href="http://demo.themeisle.com/parallax-one/category/parallax-one/" rel="category tag">Parallax One</a>				</span>
+            <a href="http://demo.themeisle.com/parallax-one/2015/07/03/blog-post-title/#comments" class="post-comments">
+                    <i class="icon-comment-alt"></i>3</a>
+        </div>
+    <div class="clearfix"></div>
+    </header>
+</article>

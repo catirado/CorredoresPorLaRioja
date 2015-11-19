@@ -2,20 +2,25 @@
 
 namespace CorredoresRioja\UI\RunnersBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
 class RacesController extends Controller
 {
-    /**
-     * @Route("/carreras", name="races")
-     */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        return $this->render('RunnersBundle:Races:index.html.twig');
-        /*return $this->render('default/races.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-        ));*/
+        //this would be so much better with pagination!
+        $racesDisputed = $this->get('racerepository')->getDisputedRaces();
+        $racesNonDisputed = $this->get('racerepository')->getNonDisputedRaces();
+        
+        return $this->render('RunnersBundle:Races:index.html.twig',
+                            array('racesDisputed' => $racesDisputed, 
+                                  'racesNonDisputed' => $racesNonDisputed));
+    }
+    
+    public function showRaceAction($slug)
+    {
+        $race = $this->get('racerepository')->getRaceBySlug($slug);
+        //clasificaciones o inscritos..?¿
+        return $this->render('RunnersBundle:Races:race.html.twig',array( 'race' => $race ));
     }
 }

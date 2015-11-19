@@ -702,8 +702,8 @@ big {
    2.6 SECTION HEADERS       
 -----------------------------------------*/
 .section-header {
-	margin-top: 90px;
-	margin-bottom: 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -4538,16 +4538,17 @@ a:hover {
 .post-img-wrap {
 	position: relative;
 	min-height: 150px;
-	background-color: rgb(234, 234, 234);
+        width: 23%;
+        float: left;
 }
 
 .list-post-entry-meta {
 	position: relative;
 	bottom: -1px;
 	left: 0;
-	width: 100%;
-	background: rgba(247, 247, 247, 1);
+	width: 77%;
 	padding: 14px;
+        float: right;
 }
 
 .posted-in i {
