@@ -9,7 +9,7 @@ services:
     racerepository.inmemory:
         class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryRaceRepository
         public: false
-    runnerrepositoray:
+    runnerrepository:
         alias: runnerrepository.inmemory
     runnerrepository.inmemory:
         class: CorredoresRioja\Infrastructure\Repositories\InMemory\InMemoryRunnerRepository
@@ -30,4 +30,4 @@ services:
             - { name: twig.extension }
     runneruserprovider:
         class: CorredoresRioja\Infrastructure\Security\RunnerUserProvider
-        arguments: ["@runnerrepositoray"]
+        arguments: ["@runnerrepository"]
