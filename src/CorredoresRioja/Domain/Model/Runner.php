@@ -9,72 +9,50 @@ class Runner {
     private $email;
     private $password;
     private $salt;
-    //mejor esto otra clase
     private $address;
     private $birthDate;
-
-    function getDni() {
+    
+    public function __construct($dni, $name, $lastname, $email, $password, $salt, $address, $birthDate) {
+        $this->dni = $dni;
+        $this->name = $name;
+        $this->lastname = $lastname;
+        $this->email = $email;
+        $this->password = $password;
+        $this->salt = $salt;
+        $this->address = $address;
+        $this->birthDate = $birthDate;
+    }
+            
+    public function getDni() {
         return $this->dni;
     }
 
-    function getName() {
+    public function getName() {
         return $this->name;
     }
 
-    function getLastname() {
+    public function getLastname() {
         return $this->lastname;
     }
 
-    function getEmail() {
+    public function getEmail() {
         return $this->email;
     }
 
-    function getPassword() {
+    public function getPassword() {
         return $this->password;
     }
 
-    function getSalt() {
+    public function getSalt() {
         return $this->salt;
     }
 
-    function getAddress() {
+    public function getAddress() {
         return $this->address;
     }
 
-    function getBirthDate() {
+    public function getBirthDate() {
         return $this->birthDate;
-    }
-
-    function setDni($dni) {
-        $this->dni = $dni;
-    }
-
-    function setName($name) {
-        $this->name = $name;
-    }
-
-    function setLastname($lastname) {
-        $this->lastname = $lastname;
-    }
-
-    function setEmail($email) {
-        $this->email = $email;
-    }
-
-    function setPassword($password) {
-        $this->password = $password;
-    }
-
-    function setSalt($salt) {
-        $this->salt = $salt;
-    }
-
-    function setAddress($address) {
-        $this->address = $address;
-    }
-
-    function setBirthDate($birthDate) {
-        $this->birthDate = $birthDate;
     }
     
     /**

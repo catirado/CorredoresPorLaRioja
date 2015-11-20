@@ -23,4 +23,15 @@ class RacesController extends Controller
         //clasificaciones o inscritos..?¿
         return $this->render('RunnersBundle:Races:race.html.twig',array( 'race' => $race ));
     }
+    
+    public function myRacesAction()
+    {
+        //todo change this
+        $racesDisputed = $this->get('racerepository')->getDisputedRaces();
+        $racesNonDisputed = $this->get('racerepository')->getNonDisputedRaces();
+        
+        return $this->render('RunnersBundle:Races:index.html.twig',
+                            array('racesDisputed' => $racesDisputed, 
+                                  'racesNonDisputed' => $racesNonDisputed));
+    }
 }

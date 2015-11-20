@@ -8,11 +8,34 @@ homepage:
 races:
     locales:  { en: "/races", es: "/carreras" }
     defaults: { _controller: RunnersBundle:Races:index }
- 
-login:
-    pattern:  /login
-    defaults: { _controller: RunnersBundle:Users:login }
     
 race:
     locales:  { en: "/race/{slug}", es: "/carrera/{slug}" }
     defaults: { _controller: RunnersBundle:Races:showRace }
+
+myraces:
+    locales:  { en: "/myraces", es: "/miscarreras" }
+    defaults: { _controller: RunnersBundle:Races:myRaces }
+
+runnerprofile:
+    locales:  { en: "/myprofile", es: "/miperfil" }
+    defaults: { _controller: RunnersBundle:Users:myProfile }
+    
+login:
+    pattern:  /login
+    defaults: { _controller: RunnersBundle:Users:login }
+    
+login_check:
+    locales: { en: /login_check, es: /login_check }
+
+logout:
+    locales: { en: /logout, es: /logout }
+     
+signup:
+    locales: { en: /signup, es: /registro }
+    defaults: {_controller: RunnersBundle:Users:signup}
+    
+signupComplete:
+    locales: { en: /signupcomplete, es: /registrocompleto }
+    defaults: {_controller: RunnersBundle:Users:signupComplete}
+    

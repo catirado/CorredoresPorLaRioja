@@ -20,8 +20,8 @@ class RunnerUserProvider implements UserProviderInterface{
         $userData = $this->runnerRepository->getRunnerByDNI($username);
         if ($userData){ 
             $password = $userData->getPassword(); 
-            $salt = $userData->getSalt(); 
-            return new​ CorredorUser($username, $password,$salt); 
+            $salt = $userData->getSalt();
+            return new RunnerUser($username, $password, $salt); 
         } 
         
         throw new UsernameNotFoundException(
@@ -42,6 +42,4 @@ class RunnerUserProvider implements UserProviderInterface{
     public function supportsClass($class) {
         return $class == 'CorredoresRioja\Infrastructure\Security\RunnerUser';
     }
-    
-    
 }

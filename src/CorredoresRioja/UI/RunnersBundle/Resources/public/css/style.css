@@ -6623,3 +6623,31 @@ input[type=submit].edd-submit {
 {
     margin-top: 70px;
 }
+
+#menu-menu-1 .dropdown-toggle
+{
+    background:none;
+    width: 52px;
+    position: static;
+    height:18px;
+}
+
+#menu-menu-1 a.dropdown-toggle img
+{
+    margin-top:-3px;
+}
+
+#menu-menu-1 .dropdown-toggle:after
+{
+    display: none;
+}
+
+#menu-menu-1 .caret
+{
+    margin-left:4px;
+}
+
+li.language-switcher a
+{
+    margin: 2px 1px;
+}
