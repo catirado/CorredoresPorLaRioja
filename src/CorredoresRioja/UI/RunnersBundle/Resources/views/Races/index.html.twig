@@ -8,7 +8,7 @@
                 <div class="colored-line"></div>                                 
             </div>
             <div class="post-list">
-            {% for race in racesDisputed %}
+            {% for race in racesNonDisputed %}
                 {% include 'RunnersBundle:Races:race_listitem.html.twig' with{'race': race} %}
             {% endfor %}
             </div>
@@ -17,7 +17,7 @@
                 <div class="colored-line"></div>                                 
             </div>
             <div class="post-list">
-            {% for race in racesNonDisputed %}
+            {% for race in racesDisputed %}
                 {% include 'RunnersBundle:Races:race_listitem.html.twig' with{'race': race} %}
             {% endfor %}
             </div>

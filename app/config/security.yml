@@ -3,6 +3,11 @@ security:
         # Usuarios del frontend
         runner:
             id: runneruserprovider
+        #administradores:
+                #    memory:
+                #        users:
+                            # user = admin, pass = 1234
+                #            admin: { password: Eti36Ru/pWG6WfoIPiDFUBxUuyvgMA4L8+LLuGbGyqV9ATuT9brCWPchBqX5vFTF+DgntacecW+sSGD+GZts2A==, roles: ROLE_ADMIN }
 
     firewalls:
         # Firewall global utilizado en la parte pública
@@ -18,75 +23,26 @@ security:
             remember_me:
                 key:        cupon1234
                 lifetime:   604800  # 604.800 = 3.600 * 24 * 7 = 1 semana
-            
-    access_control:
-        - { path: ^/(es|en)/(myraces|miscarreras), roles: ROLE_RUNNER }
-        - { path: ^/extranet/login,    roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/extranet/*,        roles: ROLE_ORGANIZATION }
-        - { path: ^/backend/*,         roles: ROLE_ADMIN }
-    
-    encoders:
-     Symfony\Component\Security\Core\User\User:
-         algorithm: plaintext
-     CorredoresRioja\Infrastructure\Security\RunnerUser:
-         algorithm: plaintext
-     CorredoresRioja\Infrastructure\Domain\Model\Runner:
-         algorithm: plaintext
-         
-    #firewalls:
         # Firewall para la zona de administración
         #backend:
         #    pattern:        ^/admin
         #    provider:       admins
         #    http_basic:     ~
         
-        # Firewall para la zona de organizaciones
-        #extranet:
-        #    pattern:        ^/organizaciones
-        #    provider:       organizations
-        #    anonymous:      ~
-        #    form_login:
-        #        login_path: /organizations/login
-        #        check_path: /organizations/login_check
-        #    logout:
-        #        path:       /organizations/logout
-        #        target:     /organizations
-        # Firewall global utilizado en la parte pública o frontend
-        #frontend:
-        #    pattern:        ^/*
-        #    provider:       users
-        #    anonymous:      ~
-        #    form_login:
-        #        login_path: users_login
-        #        check_path: users_login_check
-        #    logout:
-        #        path:       users_logout
-        #        
-    #access_control:
-       # - { path: ^/(es|en)/users/(login|registro), roles: IS_AUTHENTICATED_ANONYMOUSLY }
-       #- { path: ^/(es|en)/users/*, roles: ROLE_USUARIO }
-       # - { path: ^/organizations/login,    roles: IS_AUTHENTICATED_ANONYMOUSLY }
-       # - { path: ^/organizations/*,        roles: ROLE_TIENDA }
-       # - { path: ^/admin/*,         roles: ROLE_ADMIN }
-
-    #encoders:
-       # Cupon\UsuarioBundle\Entity\Usuario: { algorithm: sha512, iterations: 10 }
-       # Cupon\TiendaBundle\Entity\Tienda: { algorithm: sha512, iterations: 10 }
-       #Symfony\Component\Security\Core\User\User: sha512
-
-    #providers:
-        # Usuarios corredores
-        #usuarios:
-        #   entity: { class: Cupon\UsuarioBundle\Entity\Usuario, property: email }
-        # Usuarios organizaciones
-        #tiendas:
-        #    entity: { class: Cupon\TiendaBundle\Entity\Tienda, property: login }
-        # Usuarios de administración
-        #administradores:
-        #    memory:
-        #        users:
-                    # user = admin, pass = 1234
-        #            admin: { password: Eti36Ru/pWG6WfoIPiDFUBxUuyvgMA4L8+LLuGbGyqV9ATuT9brCWPchBqX5vFTF+DgntacecW+sSGD+GZts2A==, roles: ROLE_ADMIN }
-
+    access_control:
+        - { path: ^/(es|en)/(myraces|miscarreras), roles: ROLE_RUNNER }
+        - { path: ^/(es|en)/(myprofile|miperfil), roles: ROLE_RUNNER }
+        - { path: ^/organization/login,    roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/organization/*,        roles: ROLE_ORGANIZATION }
+        - { path: ^/admin/*,         roles: ROLE_ADMIN }
+    
+    encoders:
+     Symfony\Component\Security\Core\User\User:
+         algorithm: plaintext
+     CorredoresRioja\Infrastructure\Security\RunnerUser:
+         algorithm: plaintext
+     CorredoresRioja\Domain\Model\Runner:
+         algorithm: plaintext
+         
     role_hierarchy:
         #ROLE_ADMIN: [ROLE_ORGANIZATION, ROLE_USER, ROLE_ALLOWED_TO_SWITCH]

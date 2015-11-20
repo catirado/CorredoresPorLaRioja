@@ -2,6 +2,7 @@
 
 namespace CorredoresRioja\Domain\Model;
 use CorredoresRioja\Infrastructure\Util;
+use DateTime;
 
 class Race {
     
@@ -13,7 +14,7 @@ class Race {
     private $inscriptionLimitDate;
     private $maxParticipants;
     private $image;
-    private $organizationId;
+    private $organization;
     private $slug;
     private $city;
     
@@ -25,7 +26,7 @@ class Race {
                                 $inscriptionLimitDate,
                                 $maxParticipants,
                                 $image,
-                                $organizationId,
+                                $organization,
                                 $city) {
         $this->id = $id;
         $this->name = $name;
@@ -35,7 +36,7 @@ class Race {
         $this->inscriptionLimitDate = $inscriptionLimitDate;
         $this->maxParticipants = $maxParticipants;
         $this->image = $image;
-        $this->organizationId = $organizationId;
+        $this->organization = $organization;
         $this->city = $city;
         $this->slug = Util::getSlug($name);
     }
@@ -72,8 +73,8 @@ class Race {
         return $this->image;
     }
     
-    public function getOrganizationId() {
-        return $this->organizationId;
+    public function getOrganization() {
+        return $this->organization;
     }
     
     public function getCity()
@@ -86,4 +87,21 @@ class Race {
         return $this->slug;
     }
     
+    public function isDisputed()
+    {
+        return new DateTime() > $this->getDate();
+    }
+    
+    public function isInscriptionsOpen($numParticipants)
+    {
+        if (new DateTime() > $this->getInscriptionLimitDate())
+        {
+            if ($numParticipants >= $this->getMaxParticipants()) {
+                return false;
+            }
+
+            return true;
+        }
+        return false;
+    }
 }

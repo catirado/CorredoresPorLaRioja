@@ -20,7 +20,15 @@ myraces:
 runnerprofile:
     locales:  { en: "/myprofile", es: "/miperfil" }
     defaults: { _controller: RunnersBundle:Users:myProfile }
-    
+
+inscription:
+    locales:  { en: "/inscription", es: "/inscription" }
+    defaults: { _controller: RunnersBundle:Races:inscription }
+
+organization:
+    locales:  { en: "/organization/{slug}", es: "/organizacion/{slug}" }
+    defaults: { _controller: OrganizationsBundle:Organization:show }
+
 login:
     pattern:  /login
     defaults: { _controller: RunnersBundle:Users:login }

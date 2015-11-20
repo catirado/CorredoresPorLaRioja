@@ -1,6 +1,7 @@
 <?php
 
 namespace CorredoresRioja\Domain\Model;
+use CorredoresRioja\Infrastructure\Util;
 
 class Organization {
     
@@ -12,8 +13,14 @@ class Organization {
     private $salt;
     
     //constructor para crearla
-    
-    //funciones signficiativas, así como constructores
+    public function __construct($id, $name, $description, $email, $password, $salt) {
+        $this->id = $id;
+        $this->name = $name;
+        $this->description = $description;
+        $this->email = $email;
+        $this->password = $password;
+        $this->slug = Util::getSlug($name);
+    }
     
     function getId() {
         return $this->id;

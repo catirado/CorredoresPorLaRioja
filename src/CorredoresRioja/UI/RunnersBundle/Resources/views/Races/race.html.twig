@@ -1,53 +1,56 @@
 {% extends 'runners.html.twig' %}
 
 {% block body %}
-    <div id="content" class="content-wrap">
-        <div class="container">
-            <div id="primary" class="content-area col-md-12"><nav class="woocommerce-breadcrumb" itemprop="breadcrumb"><a href="http://demo.themeisle.com/parallax-one">Home</a>&nbsp;/&nbsp;<a href="http://demo.themeisle.com/parallax-one/product-category/apps/">Apps</a>&nbsp;/&nbsp;Acorns</nav>
-                <div class="images">
-                    <a href="http://demo.themeisle.com/parallax-one/wp-content/uploads/sites/38/2015/07/dirt2.jpg" itemprop="image" class="woocommerce-main-image zoom" title="" data-rel="prettyPhoto"><img width="400" height="300" src="http://demo.themeisle.com/parallax-one/wp-content/uploads/sites/38/2015/07/dirt2.jpg" class="attachment-shop_single wp-post-image" alt="dirt2" title="dirt2"></a>
+    <div id="content" class="content-wrap single single-product postid-104 woocommerce woocommerce-page">
+        <div class="container ">
+            <div id="primary" class="content-area col-md-12 ">
+                <div class="post-104 product type-product status-publish has-post-thumbnail product_cat-apps product_cat-themeisle product_cat-wear shipping-taxable purchasable product-type-simple product-cat-apps product-cat-themeisle product-cat-wear instock">
+                <div class="images" style="float:left;width:48%;">
+                    <img width="400" height="300" src="{{web_image('images/races/' ~ race.image).zoomCrop(400,300)}}" class="attachment-shop_single wp-post-image" alt="dirt2" title="dirt2"></a>
                 </div>
-                <div class="summary entry-summary">
+                <div class="summary entry-summary" style="float:right;width:48%;">
 
-                            <h1 itemprop="name" class="product_title entry-title">Acorns</h1>
-            <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-
-                    <p class="price"><span class="amount">£99.00</span></p>
-
-                    <meta itemprop="price" content="99">
-                    <meta itemprop="priceCurrency" content="GBP">
-                    <link itemprop="availability" href="http://schema.org/InStock">
-
-            </div>
+                <h1 itemprop="name" class="product_title entry-title">{{race.name}}</h1>
+                
+                <h4><strong>Distancia:</strong> {{race.distance}} km</h4>
+                <h4><strong>Fecha:</strong>  {{race.date|localizeddate('full','short',app.request.locale)}} </h4>
+                <h4><strong>Ciudad:</strong>  {{race.city}} km</h4>
+                <h4><strong>Fecha límite inscripción:</strong>  {{race.inscriptionLimitDate|localizeddate('full','none',app.request.locale)}} </h4>
+                
             <div itemprop="description">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    <p>{{race.description}}</p>
             </div>
-
-
-
-
-                    <form class="cart" method="post" enctype="multipart/form-data">
-
-                            <div class="quantity"><input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4"></div>
-
-                            <input type="hidden" name="add-to-cart" value="104">
-
-                            <button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
-
-                                    </form>
-
+            <br/>
+            
+            <a href="{{path('inscription')}}" type="submit" class="single_add_to_cart_button button alt">Inscribirse</a>
 
             <div class="product_meta">
-
-
-
-                    <span class="posted_in">Categories: <a href="http://demo.themeisle.com/parallax-one/product-category/apps/" rel="tag">Apps</a>, <a href="http://demo.themeisle.com/parallax-one/product-category/themeisle/" rel="tag">Themeisle</a>, <a href="http://demo.themeisle.com/parallax-one/product-category/wear/" rel="tag">Wear</a></span>
-
-
-                        </div>
+                <span class="posted_in">Organizador: 
+                    <a href="{{path('organization', {'slug': race.organization.slug})}}" rel="tag">{{race.organization.name}}</a></span>    </div>
                     </div><!-- .summary -->
                 </div>
             </div>
+            {% if race.isDisputed() == false %}
+            <h3>Participantes</h3>
+            {% else %}
+            <h3>Clasificaciones</h3>
+            {% endif %}
+             <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Dorsal</td>
+                    <td>Tiempo</td>
+                </tr>
+                
+            </table>
+             {% if participants %}
+                    {% for participant in participants %}
+                               <li>{{ participant.dorsal|e }}</li>
+
+                    {% endfor %}
+                {% endif %}
+        </div>
+           
         </div>
     </div>
 {% endblock %}

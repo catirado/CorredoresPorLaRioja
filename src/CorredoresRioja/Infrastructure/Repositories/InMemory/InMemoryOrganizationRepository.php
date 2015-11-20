@@ -15,7 +15,7 @@ class InMemoryOrganizationRepository implements OrganizationRepository {
     public function getAllOrganizations() {
         return $this->$organizations;
     }
-
+    
     public function getOrganizationByMail($mail) {
         
     }
