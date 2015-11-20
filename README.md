@@ -18,7 +18,7 @@ Se ha implementado las siguiente páginas:
 El menú de mis carreras y perfil sólo se muestran si el usuario está logueado. Además si se intenta entrar sin estar logueado se reenvia a la pantalla de login-
 
 ##Internacionalización
-- Se ha incluido un elector de idiomas
+- Se ha incluido un selector de idiomas
 - Se han internacionalizado las rutas
 - Se han hecho traducciones de la mayor parte de la aplicación
 - Se han internacionalizado las fechas
@@ -28,14 +28,17 @@ El menú de mis carreras y perfil sólo se muestran si el usuario está logueado
 - Se han utlizado includes (header, footer)
 - Se han utilizado varios filtros (capitalize, date, localizeddate, 
 
-##bundles
+##Bundles
 Se han utilizado varios bundles de terceros
 - GregwarImageBundle: Para hacer resize de las imágenes
 - BeSimpleI18nRoutingBundle: Para la internacionalización de las rutas
 - TwigExtension: Para los filtro de fechas interncionalizadas
 
-##optimización
+##Optimización
 Tanto el css como el js se han comprimido en un único fichero utilizado Assetic
 
-##instalación
+##Instalación
 Es necesario activar php intl
+Para entrar como usuario logueado
+usuario: 1234
+contraseña: 1234
