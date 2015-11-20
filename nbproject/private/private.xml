@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/carlost/Desktop/Universidad/Tramo%20I/Desarrollo%20de%20aplicaciones%20para%20Internet/CorredoresPorLaRioja/app/config/routing.yml</file>
-            <file>file:/C:/Users/carlost/Desktop/Universidad/Tramo%20I/Desarrollo%20de%20aplicaciones%20para%20Internet/CorredoresPorLaRioja/src/CorredoresRioja/UI/RunnersBundle/Resources/config/routing.yml</file>
-            <file>file:/C:/Users/carlost/Desktop/Universidad/Tramo%20I/Desarrollo%20de%20aplicaciones%20para%20Internet/CorredoresPorLaRioja/src/CorredoresRioja/UI/RunnersBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/app/Resources/views/header.html.twig</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/src/CorredoresRioja/UI/RunnersBundle/Controller/RacesController.php</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/app/Resources/views/runners.html.twig</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/app/Resources/views/footer.html.twig</file>
+            <file>file:/C:/Users/carlost/Documents/GitHub/CorredoresPorLaRioja/app/AppKernel.php</file>
         </group>
     </open-files>
 </project-private>
