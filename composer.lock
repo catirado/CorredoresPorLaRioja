@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9426241f5a218461b08ec369fa0bb890",
-    "content-hash": "5357131c6570aa01819dc942381c6726",
+    "hash": "13178055cc9d256509b3496bc11005de",
+    "content-hash": "a3b8ef6c78bef98c78e5a24946e09a7a",
     "packages": [
         {
             "name": "besimple/i18n-routing-bundle",
@@ -2160,7 +2160,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.9"
+        "php": ">=5.3.9",
+        "ext-intl": "*"
     },
     "platform-dev": []
 }
