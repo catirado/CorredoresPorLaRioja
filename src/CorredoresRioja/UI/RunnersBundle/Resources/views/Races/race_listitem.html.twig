@@ -16,20 +16,11 @@
 
         <div class="entry-meta list-post-entry-meta">
             <h3><a href="{{path('race', {'slug': race.slug})}}">{{race.name}}</a></h3>
-            <span itemscope="" itemprop="author" itemtype="http://schema.org/Person" class="entry-author post-author">
-                    <span itemprop="name" class="entry-author author vcard">
-                    <i class="icon-man-people-streamline-user"></i><a itemprop="url" class="url fn n" href="http://demo.themeisle.com/parallax-one/author/codeinwp/" rel="author">codeinwp </a>
-                    </span>
-            </span>
             
-                    <p>{{race.distance}}</p>
-                    <p>{{race.date|localizeddate('full','none',app.request.locale)}}</p>
-                    <p><span class="posted-in">{{race.city}}</span></p>
-            <span class="posted-in entry-terms-categories" itemprop="articleSection">
-                    <i class="icon-basic-elaboration-folder-check"></i>Posted in 
-                    <a href="http://demo.themeisle.com/parallax-one/category/parallax-one/" rel="category tag">Parallax One</a>				</span>
-            <a href="http://demo.themeisle.com/parallax-one/2015/07/03/blog-post-title/#comments" class="post-comments">
-                    <i class="icon-comment-alt"></i>3</a>
+             <h3>{{race.distance}} km</h3>
+             <h4>{{race.city}}</h4>
+             <p>{{race.date|localizeddate('full','short',app.request.locale)}} </p>
+                    
         </div>
     <div class="clearfix"></div>
     </header>
