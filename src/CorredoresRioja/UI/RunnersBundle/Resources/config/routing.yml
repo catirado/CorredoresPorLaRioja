@@ -35,7 +35,3 @@ signup:
     locales: { en: /signup, es: /registro }
     defaults: {_controller: RunnersBundle:Users:signup}
     
-signupComplete:
-    locales: { en: /signupcomplete, es: /registrocompleto }
-    defaults: {_controller: RunnersBundle:Users:signupComplete}
-    
