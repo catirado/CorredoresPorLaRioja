@@ -21,7 +21,8 @@
         "besimple/i18n-routing-bundle": "dev-master",
         "javiereguiluz/easyadmin-bundle": "v1.9.1",
         "twig/extensions": "dev-master",
-        "gregwar/image-bundle": "dev-master"
+        "gregwar/image-bundle": "dev-master",
+        "ext-intl": "*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
