@@ -18,9 +18,8 @@
                     </button>
                     
                     <a href="{{ path('homepage') }}" class="navbar-brand" title="corredoresrioja">
-                        {% image '@RunnersBundle/Resources/public/images/logo.png' output='/images/logo.png' %}
-                        <img src="{{ asset_url }}" alt="corredoresrioja" class=""></a>
-                        {% endimage %}
+                        <img src="{{ asset('images/logo.png') }}" alt="corredoresrioja" class=""></a>
+                        
                         <div class="header-logo-wrap text-header paralax_one_only_customizer">
                             <h1 itemprop="headline" id="site-title" class="site-title">
                                 <a href="{{ path('homepage') }}" title="corredoresrioja" rel="home">corredoresrioja</a></h1><p itemprop="description" id="site-description" class="site-description">corredoresrioja</p>

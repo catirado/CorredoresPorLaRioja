@@ -3,10 +3,8 @@
 {% block body %}
      <!-- CONTAINER -->
         <ul id="parallax_move" style="width: 1469px; margin-left: -60px; margin-top: -60px; position: absolute; transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
-           {% image '@RunnersBundle/Resources/public/images/background.jpg' output='/images/background.jpg' %}
-           <li class="layer layer1" data-depth="0.10" style="height: 700px; transform: translate3d(4.23709px, -8.41158px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px; background-image: url({{ asset_url }});">
+           <li class="layer layer1" data-depth="0.10" style="height: 700px; transform: translate3d(4.23709px, -8.41158px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px; background-image: url({{ asset('images/background.jpg') }});">
            </li>
-           {% endimage %}
         </ul>
             <div class="overlay-layer-wrap">
                     <div class="container overlay-layer" id="parallax_header">
