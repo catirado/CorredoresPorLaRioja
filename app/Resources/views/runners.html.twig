@@ -1,8 +1,9 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-{% stylesheets '@RunnersBundle/Resources/public/css/bootstrap.min.css'
-                '@RunnersBundle/Resources/public/css/style.css'
+{% stylesheets 'css/bootstrap.min.css'
+                'css/style.css'
+                'css/flag-icon.css'
    output='css/runners.css' %}
     <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
 {% endstylesheets %}
@@ -13,7 +14,7 @@
 {% block javascripts %}
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    {% javascripts '@RunnersBundle/Resources/public/js/*' %}
+    {% javascripts 'js/*' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
