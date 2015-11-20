@@ -1,8 +1,11 @@
 CorredoresPorLaRioja
 ====================
 
+http://corredoresrioja.herokuapp.com/
+
 Proyecto para la asignatura
 
 En homepage hay un filtro
 
-activar php intl 
+
+Es necesario activar php intl 
