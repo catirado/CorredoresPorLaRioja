@@ -7,6 +7,7 @@ http://corredoresrioja.herokuapp.com/
 ##Funcionalidad
 Se han implementado los repositorios en memoria como Fake, sólo para la funcionalidad necesitada.
 Se ha implementado las siguiente páginas:
+- Home
 - Login
 - Registro
 - Carreras
