@@ -16,7 +16,7 @@ class InMemoryRunnerRepository implements RunnerRepository {
     }
 
     public function getRunnerByDNI($runner) {
-        return new Runner('1', 'Carlos', 'Tirado', 'carlos@tirado.com', 'carlos', '', 'calahorra', new DateTime('01/28/1987'));
+        return new Runner('1234', 'Carlos', 'Tirado', 'carlos@tirado.com', '1234', '', 'calahorra', new DateTime('01/28/1987'));
     }
 
     public function removeRunner($runnerId) {
