@@ -28,3 +28,6 @@ services:
         class: Twig_Extensions_Extension_Intl
         tags:
             - { name: twig.extension }
+    runneruserprovider:
+        class: CorredoresRioja\Infrastructure\Security\RunnerUserProvider
+        arguments: ["@runnerrepositoray"]

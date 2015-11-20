@@ -36,8 +36,35 @@
                                     <ul id="menu-menu-1" class="primary-menu small-text">
                                         <li id="menu-item-2309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2309"><a href={{ path('homepage') }}>​ {{'menu.home'|trans({},'menu')}}</a></li>
                                         <li id="menu-item-2315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"><a href={{ path('races') }}>{{'menu.races'|trans({},'menu')}}</a></li>
+                                        {% if app.user and is_granted('ROLE_RUNNER') %}
+                                        <li id="menu-item-2305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href={{ path('myraces') }}>{{'menu.myraces'|trans({},'menu')}}</a></li>
+                                        <li id="menu-item-2305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href={{ path('runnerprofile') }}>{{'menu.profile'|trans({},'menu')}}</a></li>
+                                        {% endif %}
+                                        {% if app.user and is_granted('ROLE_ORGANIZATION') %}
+                                        
+                                        {% endif %}
                                         <li id="menu-item-2305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2305"><a href={{ path('organizations') }}>{{'menu.organizations'|trans({},'menu')}}</a></li>
+                                        {%if not app.user%}
                                         <li id="menu-item-2304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2304"><a href={{ path('login') }}>{{'menu.login'|trans({},'menu')}}</a></li>
+                                        {%endif%}
+                                        {% if app.user and is_granted('ROLE_RUNNER') %}
+                                        <li id="menu-item-2304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2304"><a href={{ path('logout') }}>{{'menu.logout'|trans({},'menu')}}</a></li>
+                                        {% endif %}
+                                        <li class="dropdown menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                
+                                                {% if app.request.locale == 'es' %}
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="flag flag-es" alt="" /> ES<span class="caret"></span>
+                                                {% else %}
+                                                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="flag flag-us" alt="" /> EN<span class="caret"></span>
+                                                {% endif %}
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                {# {{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }} #}
+                                                <li class="language-switcher"><a href="{{ path('homepage', { '_locale': 'es' })}}"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="flag flag-es" alt="" /> {{'menu.spanish'|trans({},'menu')}}</a></li>
+                                                <li class="language-switcher"><a href="{{ path('homepage', { '_locale': 'en' })}}"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="flag flag-us" alt="" /> {{'menu.english'|trans({},'menu')}}</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
