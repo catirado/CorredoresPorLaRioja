@@ -17,15 +17,15 @@ Se ha implementado las siguiente páginas:
 El menú de mis carreras y perfil sólo se muestran si el usuario está logueado. Además si se intenta entrar sin estar logueado se reenvia a la pantalla de login-
 
 ##Internacionalización
-Se ha incluido un elector de idiomas
-Se han internacionalizado las rutas
-Se han hecho traducciones de la mayor parte de la aplicación
-Se han internacionalizado las fechas
+- Se ha incluido un elector de idiomas
+- Se han internacionalizado las rutas
+- Se han hecho traducciones de la mayor parte de la aplicación
+- Se han internacionalizado las fechas
 
 ##Twig
-Se ha utilizado herencia (de base)
-Se han utlizado includes (header, footer)
-Se han utilizado varios filtros (capitalize, date, localizeddate, 
+- Se ha utilizado herencia (de base)
+- Se han utlizado includes (header, footer)
+- Se han utilizado varios filtros (capitalize, date, localizeddate, 
 
 ##bundles
 Se han utilizado varios bundles de terceros
