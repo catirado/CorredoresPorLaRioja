@@ -9,7 +9,9 @@
       <div class="login-or">
         <hr class="hr-or">
       </div>
-
+      {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey | trans(error.messageData, 'security') }}</div>    
+      {% endif %}
       <form role="form" action="{{path('login_check')}}" method="post">
         <div class="form-group">
           <label for="inputUsernameEmail">Username or email</label>
