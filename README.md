@@ -1,6 +1,7 @@
 corredoresrioja
 ====================
 
+Se puede ver el proyecto en
 http://corredoresrioja.herokuapp.com/
 
 
@@ -15,7 +16,7 @@ Se ha implementado las siguiente páginas:
 - Mis carreras
 
 ##Seguridad
-El menú de mis carreras y perfil sólo se muestran si el usuario está logueado. Además si se intenta entrar sin estar logueado se reenvia a la pantalla de login-
+El menú de mis carreras y perfil sólo se muestran si el usuario está logueado. Además si se intenta entrar sin estar logueado se reenvia a la pantalla de login.
 
 ##Internacionalización
 - Se ha incluido un selector de idiomas
@@ -26,7 +27,7 @@ El menú de mis carreras y perfil sólo se muestran si el usuario está logueado
 ##Twig
 - Se ha utilizado herencia (de base)
 - Se han utlizado includes (header, footer)
-- Se han utilizado varios filtros (capitalize, date, localizeddate, 
+- Se han utilizado varios filtros (capitalize, date, localizeddate, slice...)
 
 ##Bundles
 Se han utilizado varios bundles de terceros
