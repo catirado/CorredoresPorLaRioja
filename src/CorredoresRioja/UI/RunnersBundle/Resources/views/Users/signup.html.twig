@@ -1,0 +1,18 @@
+{% extends 'runners.html.twig' %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="main">
+       <h3>Registro</h3>
+       <div class="login-or">
+         <hr class="hr-or">
+       </div>
+       <form action = "{{ path('signup') }}" method = "post" {{ form_enctype ( formulario ) }}>
+         {{ form_widget ( formulario ) }}
+       </form>
+    <br/>
+    </div>
+  </div>
+</div>
+{%endblock%}
